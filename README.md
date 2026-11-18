@@ -45,4 +45,6 @@ brew install --cask k4rmakoma0/tap/amoxtli
 
 ## Updating casks
 
-After publishing a new application release, update the corresponding cask's `version`, `sha256`, and download URL if its filename changes. Calculate the checksum from the final signed and notarized download. Verify a cask in the local tap with `brew style --cask k4rmakoma0/tap/<cask>` and `brew audit --cask --online k4rmakoma0/tap/<cask>` before committing it.
+Swaggy updates automatically when a stable release is published in `k4rmakoma0/swaggy-edit`. Its [Homebrew workflow](https://github.com/k4rmakoma0/swaggy-edit/actions/workflows/homebrew.yml) checks the final DMG's SHA-256, signature, and notarization, then updates only `Casks/swaggy.rb` using a dedicated deploy key for this tap. Prereleases and older releases do not replace the stable cask. Application signing and notarization still happen before publication.
+
+For manually maintained casks, update the `version`, `sha256`, and download URL if its filename changes after publishing a release. Calculate the checksum from the final signed and notarized download. Verify a cask in the local tap with `brew style --cask k4rmakoma0/tap/<cask>` and `brew audit --cask --online k4rmakoma0/tap/<cask>` before committing it.
