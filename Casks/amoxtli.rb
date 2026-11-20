@@ -1,6 +1,6 @@
 cask "amoxtli" do
-  version "2.4.1"
-  sha256 "a7e170faab12a66199e3bb230c65ffedebdf0d3f6dbfaf04aecc41c64e9f4f08"
+  version "2.5"
+  sha256 "fbd97a251ca08da9d42b11a33e6384d23d4418df2529f53d2e3424ab342788eb"
 
   url "https://github.com/k4rmakoma0/amoxtli-md-viewer/releases/download/v#{version}/Amoxtli-#{version}.zip"
   name "Amoxtli"
